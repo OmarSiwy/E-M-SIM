@@ -1,0 +1,8 @@
+services:
+  x11mirror:
+    build: .
+    environment:
+      - DISPLAY=${DISPLAY} # Needed to share GPU
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix # Needed to share GPU
+    command: ["./build/E-M-SIM"] # Run the compiled program

@@ -1,0 +1,18 @@
+# FROM CONAN DOWNLOADS
+cmakedeps-Macros.cmake
+CMakePresets.json
+conan_toolchain.cmake
+conanbuild.sh
+conanbuildenv-release-x86_64.sh
+conandeps_legacy.cmake
+conanrun.sh
+conanrunenv-release-x86_64.sh
+deactivate_conanbuild.sh
+deactivate_conanrun.sh
+cmakedeps_macros.cmake
+CMakeUserPresets.json
+
+# FROM BUILD
+build/
+compile_commands.json
+.cache/
