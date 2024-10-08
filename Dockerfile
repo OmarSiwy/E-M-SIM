@@ -10,6 +10,13 @@ RUN pacman -Syu --noconfirm \
   cmake \
   python-pip \
   libglvnd \
+  pciutils \
+  vulkan-tools \
+  mesa-utils \
+  vulkan-radeon \
+  vulkan-intel \
+  vulkan-icd-loader \
+  nvidia-utils \
   && rm -rf /var/lib/pacman/sync/*
 
 RUN pip3 install conan --break-system-packages
@@ -30,4 +37,4 @@ RUN cd build && cmake .. -DCMAKE_TOOLCHAIN_FILE=build/Release/generators/conan_t
   && cmake --build . \
   && mv compile_commands.json ../ && cd ..
 
-CMD ["./build/E-M-SIM"]
+CMD ["vulkaninfo"]
